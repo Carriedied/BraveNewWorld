@@ -50,7 +50,7 @@
             Console.SetCursorPosition(playerY, playerX);
         }
 
-        static void DirectionalChoice(ConsoleKeyInfo key, ref int playerDirectionX, ref int playerDirectionY)
+        static void GetDirection(ConsoleKeyInfo key, ref int playerDirectionX, ref int playerDirectionY)
         {
             const ConsoleKey pressUpButton = ConsoleKey.UpArrow;
             const ConsoleKey pressDownButton = ConsoleKey.DownArrow;
