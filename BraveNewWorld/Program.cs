@@ -10,8 +10,8 @@
             char wall = '#';
             int playerPositionX = 0;
             int playerPositionY = 0;
-            int playerPositionDirectionX = 0;
-            int playerPositionDirectionY = 0;
+            int playerDirectionX = 0;
+            int playerDirectionY = 0;
             char[,] map;
             ConsoleKeyInfo key;
 
@@ -26,11 +26,11 @@
                 {
                     key = Console.ReadKey();
 
-                    DirectionalChoice(key, ref playerPositionDirectionX, ref playerPositionDirectionY);
+                    DirectionalChoice(key, ref playerDirectionX, ref playerDirectionY);
 
-                    if (map[playerPositionX + playerPositionDirectionX, playerPositionY + playerPositionDirectionY] != wall)
+                    if (map[playerPositionX + playerDirectionX, playerPositionY + playerDirectionY] != wall)
                     {
-                        Move(ref playerPositionX, ref playerPositionY, playerPositionDirectionX, playerPositionDirectionY, player);
+                        Move(ref playerPositionX, ref playerPositionY, playerDirectionX, playerDirectionY, player);
                     }
                 }
 
